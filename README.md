@@ -25,3 +25,19 @@ docker-compose --version (check)
 -- MAIN: cd to main project folder that hold all services and run in terminal
 
 -- docker-compose up -d
+
+
+
+
+# PRISMA custom and run
+
+-- yarn add prisma @prisma/client     (if project still not install, please install this with yarn or npm)
+
+-- yarn prisma init     ( if already install -- run this -- change .env and prisma.chema => mysql/postgreSQL/ another DB )
+
+-- yarn prisma db pull     ( this is method database first will pull table from your database )
+
+-- yarn prisma generate     ( make it fresh .. new ... if your db update column or create new table ... this command will make refresh )
+
+
+
