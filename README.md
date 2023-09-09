@@ -1,19 +1,27 @@
 # Custom-Project
 
+# Deploy to project
 
-# sudo apt install docker-compose -y
+-- FIRST: INSTALL docker compose in UBUNTU
 
-# docker-compose --version (check)
+sudo apt install docker-compose -y
 
-
-# cd each services
-
-# docker build -t test-docker-node .
-
-# docker run -p 7979:7979 test-docker-node
+docker-compose --version (check)
 
 
-with docker compose
-# cd to main project folder that hold all services
 
-# docker-compose up -d
+
+# SERVICES PROJECT
+
+-- MAIN: cd to each services project and run this in terminal
+
+-- docker build -t test-docker-node .
+
+-- docker run -p 7979:7979 test-docker-node -d
+
+
+# Docker-compose
+
+-- MAIN: cd to main project folder that hold all services and run in terminal
+
+-- docker-compose up -d
