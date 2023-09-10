@@ -3,7 +3,9 @@ import cors from "cors"
 import { API_PORT } from './Config/Config';
 import compression from 'compression';
 import cookieParser from "cookie-parser"
-import { sequelize } from './Sequelize/Sequelize'
+// import { SequelizeClient } from './Sequelize/Sequelize'
+import { SequelizeClient } from './Sequelize/Sequelize';
+import { RedisClass } from './Redis/Redis';
 
 
 class App {
@@ -34,12 +36,8 @@ class App {
     })
   }
   private async connect(): Promise<void> {
-    try {
-      await sequelize.authenticate();
-      console.log('Connection has been established successfully.');
-    } catch (error) {
-      console.error('Unable to connect to the database:', error);
-    }
+    new SequelizeClient()
+    new RedisClass()
   }
 
   private listen(): void {
